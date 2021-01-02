@@ -1,10 +1,8 @@
 # 1. Реализовать скрипт, в котором должна быть предусмотрена функция расчета заработной платы сотрудника. В расчете необходимо использовать формулу:
 # (выработка в часах * ставка в час) + премия. Для выполнения расчета для конкретных значений необходимо запускать скрипт с параметрами.
 
-period = 4
-rate = 300
-premium = 5000
+from sys import argv
 
-def calculation(period, rate, premium):
-    result = period * rate + premium
-    return result
+script_name, period, rate, premium = argv
+
+print(int(period) * int(rate) + int(premium))
