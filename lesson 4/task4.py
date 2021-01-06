@@ -3,11 +3,11 @@
 
 data = [2, 2, 2, 7, 23, 1, 44, 44, 3, 2, 10, 7, 4, 11]
 
-def quantity(x):
+def quantity(x, data):
     count = 0
     for y in data:
         if x == y: count += 1 
     if count == 1:
         return True
 
-print([x for x in data if quantity(x)])
+print([x for x in data if quantity(x, data)])
