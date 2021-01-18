@@ -7,11 +7,11 @@
 # Задачу можно усложнить, реализовав проверку порядка режимов, и при его нарушении выводить соответствующее сообщение и завершать скрипт.
 
 from time import sleep
-import colorama
-from colorama import Fore, Style
+import colorama     # без этого colorama.init() не срабатывает - NameError: name 'colorama' is not defined
+from colorama import Fore, Style    # чтобы везде colorama. не писать
 colorama.init()
 
-class TrafficLight:
+class TrafficLight: # тут возможно можно цикл сделать, но по постановке задачи это не понятно
     __color = 'Красный'
 
     def running(self):
